@@ -19,12 +19,12 @@
     <meta name="keywords" content="null">
 
 
-    <meta name="description" content="##区块链学习笔记
-###共享账本
-
+    <meta name="description" content="区块链学习笔记共享账本
 世界状态：描述账本特定时间点的状态，是账本的数据库。
 交易记录：记录产生世界状态当前值的所有交易，是世界状态的更新历史。
-账本：世界状态数据库和交易历史记录...">
+账本：世界状态数据库和交易历史记录的集合。
+
+智...">
 
 
 
@@ -175,20 +175,16 @@
     </div>
     
     <div class="post-body post-content">
-        <p>##区块链学习笔记</p>
-<p>###共享账本</p>
-<ol>
+        <h2 id="区块链学习笔记"><a href="#区块链学习笔记" class="headerlink" title="区块链学习笔记"></a>区块链学习笔记</h2><h3 id="共享账本"><a href="#共享账本" class="headerlink" title="共享账本"></a>共享账本</h3><ol>
 <li>世界状态：描述账本特定时间点的状态，是账本的数据库。</li>
 <li>交易记录：记录产生世界状态当前值的所有交易，是世界状态的更新历史。</li>
 <li>账本：世界状态数据库和交易历史记录的集合。</li>
 </ol>
-<p>###智能合约</p>
-<ol>
+<h3 id="智能合约"><a href="#智能合约" class="headerlink" title="智能合约"></a>智能合约</h3><ol>
 <li>chaincode</li>
 <li>只访问账本的数据库组件和世界状态，不会查询交易记录。目前支持语言：GO</li>
 </ol>
-<p>###fabric环境配置</p>
-<ol>
+<h3 id="fabric环境配置"><a href="#fabric环境配置" class="headerlink" title="fabric环境配置"></a>fabric环境配置</h3><ol>
 <li>Git</li>
 <li>Go - 1.10.x版本</li>
 <li>Docker - 17.06.2-ce版本或以上</li>
@@ -198,8 +194,7 @@
 <li>fabric v1.0.0 使用 Docker - 17.06.2-ce， docker-compose - 1.12.0</li>
 <li>ubuntu系统有兼容问题？？</li>
 </ol>
-<p>###go环境的配置</p>
-<ol>
+<h3 id="go环境的配置"><a href="#go环境的配置" class="headerlink" title="go环境的配置"></a>go环境的配置</h3><ol>
 <li><p>下载golang：</p>
 <pre><code>https://studygolang.com/dl
 </code></pre></li>
@@ -217,17 +212,14 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 <pre><code>source /etc/profile
 </code></pre></li>
 </ol>
-<p>###拉取Fabric源码</p>
-<pre><code>git clone https://github.com/hyperledger/fabric.git
-</code></pre><p>###编译configtxgen工具</p>
-<pre><code>cd $GOPATH/src/github.com/hyperledger/fabric
+<h3 id="拉取Fabric源码"><a href="#拉取Fabric源码" class="headerlink" title="拉取Fabric源码"></a>拉取Fabric源码</h3><pre><code>git clone https://github.com/hyperledger/fabric.git
+</code></pre><h3 id="编译configtxgen工具"><a href="#编译configtxgen工具" class="headerlink" title="编译configtxgen工具"></a>编译configtxgen工具</h3><pre><code>cd $GOPATH/src/github.com/hyperledger/fabric
 make configtxgen
 # 如果出错：&apos;ltdl.h&apos; file not found
 sudo apt install libtool libltdl-dev
 # 然后再运行make
 make configtxgen
-</code></pre><p>###测试e2e_cli</p>
-<ol>
+</code></pre><h3 id="测试e2e-cli"><a href="#测试e2e-cli" class="headerlink" title="测试e2e_cli"></a>测试e2e_cli</h3><ol>
 <li><p>执行如下脚本：</p>
 <pre><code>./network_setup.sh up
 </code></pre></li>
@@ -307,7 +299,7 @@ make configtxgen
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#区块链学习笔记"><span class="toc-text">区块链学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#共享账本"><span class="toc-text">共享账本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#智能合约"><span class="toc-text">智能合约</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fabric环境配置"><span class="toc-text">fabric环境配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#go环境的配置"><span class="toc-text">go环境的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拉取Fabric源码"><span class="toc-text">拉取Fabric源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译configtxgen工具"><span class="toc-text">编译configtxgen工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试e2e-cli"><span class="toc-text">测试e2e_cli</span></a></li></ol></li></ol>
         
     </div>
 </aside>
