@@ -32,7 +32,7 @@
     <!--Title-->
 
 
-<title>concurrent&amp;amp;parallel | Lsuis的博客</title>
+<title>一文理解进程与线程的常见概念 | Lsuis的博客</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Lsuis的博客" type="application/atom+xml">
@@ -137,9 +137,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="concurrent&amp;amp;parallel">
+        <h1 id="一文理解进程与线程的常见概念">
             
-	            concurrent&amp;amp;parallel
+	            一文理解进程与线程的常见概念
             
         </h1>
         <div class="post-meta">
@@ -190,6 +190,7 @@
 <p>但是在实际上，我们计算机的CPU性能是非常的强大，强大到其他硬件的运行速度都只能望其项背。在执行任务当中，CPU处理任务的时间是非常短的。假设出现一个CPU处理一个任务的时候，此时CPU大多数的时间都处于空闲状态（实际上是在等待其他硬件执行操作），从而造成性能资源大大的浪费。</p>
 <p>因此，并发处理成为了充分利用CPU资源的手段。当多个线程同时运行的时候，这样的执行模式称为并发处理。简单并发处理的算法如“时间片轮转进程调度算法”，它的思想简单介绍如下：在操作系统的管理下，所有正在运行的进程轮流使用CPU，每个进程允许占用CPU的时间非常短(比如10毫秒)，这样用户根本感觉不出来CPU是在轮流为多个进程服务，就好象所有的进程都在不间断地运行一样。但实际上在任何一个时间内有且仅有一个进程占有CPU。</p>
 <p>简单的总结一下，如果进程数小于CPU数，则不同的进程可以分配给不同的CPU来运行，这样，多个进程就是真正同时运行的，这便是并行。但如果进程数大于CPU数，则仍然需要使用并发技术。<br><img src="/blog/img/concurrent&amp;parallel.jpg" alt="images"></p>
+<p><em>附图来源于知乎，侵删。</em></p>
 
     </div>
     
