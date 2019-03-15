@@ -19,12 +19,8 @@
     <meta name="keywords" content="null">
 
 
-    <meta name="description" content="区块链学习笔记共享账本
-世界状态：描述账本特定时间点的状态，是账本的数据库。
-交易记录：记录产生世界状态当前值的所有交易，是世界状态的更新历史。
-账本：世界状态数据库和交易历史记录的集合。
-
-智...">
+    <meta name="description" content="一文理解进程与线程的常见概念首先，进程和线程都是针对CPU工作时间段的描述。下面来看一下它们之间的区别。
+进程进程是一个程序运行的时候被CPU抽象出来的概念，一个程序运行后被抽象为一个进程。当计...">
 
 
 
@@ -36,7 +32,7 @@
     <!--Title-->
 
 
-<title>Hyperledger基本概念及环境部署 | Lsuis的博客</title>
+<title>concurrent&amp;amp;parallel | Lsuis的博客</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Lsuis的博客" type="application/atom+xml">
@@ -141,16 +137,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Hyperledger基本概念及环境部署">
+        <h1 id="concurrent&amp;amp;parallel">
             
-	            Hyperledger基本概念及环境部署
+	            concurrent&amp;amp;parallel
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/blog/categories/区块链/">区块链</a>
+            <a class="category-link" href="/blog/categories/技术/">技术</a>
         </span>
     
 
@@ -167,7 +163,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/02/13</span>
+            <span class="date-meta">2019/03/15</span>
         </span>
         
     
@@ -177,67 +173,23 @@
     </div>
     
     <div class="post-body post-content">
-        <h2 id="区块链学习笔记"><a href="#区块链学习笔记" class="headerlink" title="区块链学习笔记"></a>区块链学习笔记</h2><h3 id="共享账本"><a href="#共享账本" class="headerlink" title="共享账本"></a>共享账本</h3><ol>
-<li>世界状态：描述账本特定时间点的状态，是账本的数据库。</li>
-<li>交易记录：记录产生世界状态当前值的所有交易，是世界状态的更新历史。</li>
-<li>账本：世界状态数据库和交易历史记录的集合。</li>
+        <h3 id="一文理解进程与线程的常见概念"><a href="#一文理解进程与线程的常见概念" class="headerlink" title="一文理解进程与线程的常见概念"></a>一文理解进程与线程的常见概念</h3><p>首先，进程和线程都是针对CPU工作时间段的描述。下面来看一下它们之间的区别。</p>
+<h4 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h4><p>进程是一个程序运行的时候被CPU抽象出来的概念，一个程序运行后被抽象为一个进程。当计算机执行一个程序的时候，必然会产生一个进程。也就是说，一个程序的执行<strong>至少有一个进程</strong>。</p>
+<h4 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h4><p>一个进程至少拥有一个线程。线程的划分尺度小于进程，使得多线程程序具有更高的并发性。在一个进程中，可能被划分为多个线程，它可以与同进程中的其他线程共享数据。在进程中，有些程序流程块是可以乱序执行的，并且这个代码块可以同时被多次执行。实际上，这样的代码块就是线程体。线程是进程中乱序执行的代码流程。</p>
+<blockquote>
+<p>通过栗子了解进程和线程的特点：<br>进程 -&gt; 火车<br>线程 -&gt; 车厢</p>
+<ol>
+<li>一列火车可能有多个车厢（一个进程可以有多个线程）</li>
+<li>乘客不能在行驶中从一列火车跳到另一列上（进程间数据不共享）</li>
+<li>乘客可以在一列火车上去往各个车厢（同一进程下的线程数据共享）</li>
+<li>一列火车抛锚了不影响另外一列火车，但是一节车厢断掉了会影响一整列火车（进程间不会相互影响，但一个线程挂掉会导致整个进程奔溃）</li>
 </ol>
-<h3 id="智能合约"><a href="#智能合约" class="headerlink" title="智能合约"></a>智能合约</h3><ol>
-<li>chaincode</li>
-<li>只访问账本的数据库组件和世界状态，不会查询交易记录。目前支持语言：GO</li>
-</ol>
-<h3 id="fabric环境配置"><a href="#fabric环境配置" class="headerlink" title="fabric环境配置"></a>fabric环境配置</h3><ol>
-<li>Git</li>
-<li>Go - 1.10.x版本</li>
-<li>Docker - 17.06.2-ce版本或以上</li>
-<li>Docker Compose - 1.14.0版本或以上</li>
-<li>Pip 安装方法：sudo apt-get install python-pip</li>
-<li>过高的docker和docker-compose环境和fabric1.0不兼容</li>
-<li>fabric v1.0.0 使用 Docker - 17.06.2-ce， docker-compose - 1.12.0</li>
-<li>ubuntu系统有兼容问题？？</li>
-</ol>
-<h3 id="go环境的配置"><a href="#go环境的配置" class="headerlink" title="go环境的配置"></a>go环境的配置</h3><ol>
-<li><p>下载golang：</p>
-<pre><code>https://studygolang.com/dl
-</code></pre></li>
-<li><p>解压并移动到/usr/local/go中</p>
-<pre><code>sudo tar -zvxf go1.6.2.linux-amd64.tar.gz
-sudo mv go /usr/local/go
-</code></pre></li>
-<li><p>设置环境变量</p>
-<pre><code>sudo gedit /etc/profile
-export GOROOT=/usr/local/go  #设置为go安装的路径
-export GOPATH=$HOME/gocode   #默认安装包的路径
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-</code></pre></li>
-<li><p>应用环境</p>
-<pre><code>source /etc/profile
-</code></pre></li>
-</ol>
-<h3 id="拉取Fabric源码"><a href="#拉取Fabric源码" class="headerlink" title="拉取Fabric源码"></a>拉取Fabric源码</h3><pre><code>git clone https://github.com/hyperledger/fabric.git
-</code></pre><h3 id="编译configtxgen工具"><a href="#编译configtxgen工具" class="headerlink" title="编译configtxgen工具"></a>编译configtxgen工具</h3><pre><code>cd $GOPATH/src/github.com/hyperledger/fabric
-make configtxgen
-# 如果出错：&apos;ltdl.h&apos; file not found
-sudo apt install libtool libltdl-dev
-# 然后再运行make
-make configtxgen
-</code></pre><h3 id="测试e2e-cli"><a href="#测试e2e-cli" class="headerlink" title="测试e2e_cli"></a>测试e2e_cli</h3><ol>
-<li><p>执行如下脚本：</p>
-<pre><code>./network_setup.sh up
-</code></pre></li>
-</ol>
-<pre><code>这个做了如下操作：
-
-1. 编译生成Fabric公私钥、证书的程序，程序在目录：fabric/release/linux-amd64/bin
-
-2. 基于configtx.yaml生成创世区块和通道相关信息，并保存在channel-artifacts文件夹。
-
-3. 基于crypto-config.yaml生成公私钥和证书信息，并保存在crypto-config文件夹中。
-
-4. 基于docker-compose-cli.yaml启动1Orderer+4Peer+1CLI的Fabric容器。
-
-5. 在CLI启动的时候，会运行scripts/script.sh文件，这个脚本文件包含了创建Channel，加入Channel，安装Example02，运行Example02等功能。
-</code></pre><p><img src="/blog/img/区块链技术实现.png" alt="images"></p>
+</blockquote>
+<h4 id="并行与并发"><a href="#并行与并发" class="headerlink" title="并行与并发"></a>并行与并发</h4><p>在同一个时间里，同一个计算机系统中如果允许两个或两个以上的进程处于运行状态，这便是多任务。目前的大多数计算机的操作系统都是多任务系统，能够管理多个进程的运行。这些任务之间互相不受影响，例如我们可以一边上网，一边打印文档。</p>
+<p>当然，说到这里，还应谈及到并行与并发。对于计算机来说，一个单核的CPU原则上只能同时执行一个任务（进程）。假设CPU上有多个核的话，就可以同时执行多个任务。例如，4核的CPU可以同时执行4个任务（进程）。一个核执行一个任务，4个任务同时执行这个时候就叫做并行处理。</p>
+<p>但是在实际上，我们计算机的CPU性能是非常的强大，强大到其他硬件的运行速度都只能望其项背。在执行任务当中，CPU处理任务的时间是非常短的。假设出现一个CPU处理一个任务的时候，此时CPU大多数的时间都处于空闲状态（实际上是在等待其他硬件执行操作），从而造成性能资源大大的浪费。</p>
+<p>因此，并发处理成为了充分利用CPU资源的手段。当多个线程同时运行的时候，这样的执行模式称为并发处理。简单并发处理的算法如“时间片轮转进程调度算法”，它的思想简单介绍如下：在操作系统的管理下，所有正在运行的进程轮流使用CPU，每个进程允许占用CPU的时间非常短(比如10毫秒)，这样用户根本感觉不出来CPU是在轮流为多个进程服务，就好象所有的进程都在不间断地运行一样。但实际上在任何一个时间内有且仅有一个进程占有CPU。</p>
+<p>简单的总结一下，如果进程数小于CPU数，则不同的进程可以分配给不同的CPU来运行，这样，多个进程就是真正同时运行的，这便是并行。但如果进程数大于CPU数，则仍然需要使用并发技术。<br><img src="/blog/img/concurrent&amp;parallel.jpg" alt="images"></p>
 
     </div>
     
@@ -255,15 +207,10 @@ make configtxgen
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/blog/2019/03/15/concurrent&parallel/" class="pre-post btn btn-default" title="concurrent&amp;parallel">
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">concurrent&amp;parallel</span>
-        </a>
     
-    
-        <a href="/blog/2019/02/13/searhPlugsDebug/" class="next-post btn btn-default" title="关于使用hexo框架站内搜索的一些坑">
+        <a href="/blog/2019/02/13/hyperledgerConcept/" class="next-post btn btn-default" title="Hyperledger基本概念及环境部署">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">关于使用hexo框架站内搜索的一些坑</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">Hyperledger基本概念及环境部署</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -306,7 +253,7 @@ make configtxgen
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#区块链学习笔记"><span class="toc-text">区块链学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#共享账本"><span class="toc-text">共享账本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#智能合约"><span class="toc-text">智能合约</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fabric环境配置"><span class="toc-text">fabric环境配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#go环境的配置"><span class="toc-text">go环境的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拉取Fabric源码"><span class="toc-text">拉取Fabric源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译configtxgen工具"><span class="toc-text">编译configtxgen工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试e2e-cli"><span class="toc-text">测试e2e_cli</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一文理解进程与线程的常见概念"><span class="toc-text">一文理解进程与线程的常见概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#进程"><span class="toc-text">进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#线程"><span class="toc-text">线程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#并行与并发"><span class="toc-text">并行与并发</span></a></li></ol></li></ol>
         
     </div>
 </aside>
