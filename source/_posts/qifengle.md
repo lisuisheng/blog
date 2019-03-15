@@ -6,7 +6,7 @@ categories:
     - 随笔
 ---
 
-{% aplayerlrc "起风了" "吴青峰" "http://ploaxr511.bkt.clouddn.com/%E8%B5%B7%E9%A3%8E%E4%BA%86%20-%20%E5%90%B4%E9%9D%92%E5%B3%B0.mp3" "http://p1.music.126.net/aMVPsO00OqlVTS2yMH8RgA==/109951163785600029.jpg?param=130y130" "autoplay" %}
+{% aplayerlrc "起风了" "吴青峰" "http://poeg603m7.bkt.clouddn.com/1111.mp3" "http://p1.music.126.net/aMVPsO00OqlVTS2yMH8RgA==/109951163785600029.jpg?param=130y130" "autoplay" %}
 [00:03.82]起风了-吴青峰
 [00:07.29]我曾将青春翻涌成她
 [00:10.72]也曾指尖弹出盛夏
