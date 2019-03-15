@@ -1,5 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+categories:
+    - 技术
+img: /img/xxx.jpg
 ---
