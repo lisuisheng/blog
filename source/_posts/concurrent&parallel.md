@@ -1,5 +1,5 @@
 ---
-title: concurrent&amp;parallel
+title: 一文理解进程与线程的常见概念
 categories:
   - 技术
 img: /img/concurrent&parallel.jpg
@@ -36,3 +36,5 @@ date: 2019-03-15 10:17:11
 
 简单的总结一下，如果进程数小于CPU数，则不同的进程可以分配给不同的CPU来运行，这样，多个进程就是真正同时运行的，这便是并行。但如果进程数大于CPU数，则仍然需要使用并发技术。
 ![images](/blog/img/concurrent&parallel.jpg)
+
+*附图来源于知乎，侵删。*
