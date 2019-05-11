@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lisuisheng.github.io/blog/2019/05/10/Integration-StackStorm-Zabbix-1/</loc>
+    
+    <lastmod>2019-05-11T14:14:22.015Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lisuisheng.github.io/blog/2019/05/10/Integration-StackStorm-Zabbix/</loc>
     
     <lastmod>2019-05-10T08:49:13.265Z</lastmod>
