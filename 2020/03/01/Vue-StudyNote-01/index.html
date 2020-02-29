@@ -19,7 +19,10 @@
     <meta name="keywords" content="null">
 
 
-    <meta name="description" content="null">
+    <meta name="description" content="Vue学习要点回顾__01
+MVC 和 MVVM 的区别
+插值表达式
+v-cloak   v-text   v-html   v-bind(:)  v-on(@)  v-model   v-fo...">
 
 
 
@@ -31,7 +34,7 @@
     <!--Title-->
 
 
-<title>分类: 随笔 | Lsuis的博客</title>
+<title>Vue学习笔记_01 | Lsuis的博客</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Lsuis的博客" type="application/atom+xml">
@@ -132,41 +135,113 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3>
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Vue学习笔记_01">
+            
+	            Vue学习笔记_01
+            
+        </h1>
+        <div class="post-meta">
     
-        随笔
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/blog/categories/技术/">技术</a>
+        </span>
     
-</h3>
 
-    <article class="post">
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+            </span>
+        </span>
+    
+
+    
         
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/blog/2019/02/12/qifengle/">2019最喜欢的一首歌～</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2019年02月12日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    
-				[00:03.82]起风了-吴青峰
-[00:07.29]我曾将青春翻涌成她
-[00:...
-                
-            </p>
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2020/03/01</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="Vue学习要点回顾-01"><a href="#Vue学习要点回顾-01" class="headerlink" title="Vue学习要点回顾__01"></a>Vue学习要点回顾__01</h2><ol>
+<li>MVC 和 MVVM 的区别</li>
+<li><p>插值表达式</p>
+<pre><code>v-cloak   v-text   v-html   v-bind(:)  v-on(@)  v-model   v-for   v-if  v-show。
+</code></pre></li>
+<li><p>事件修饰符 </p>
+<pre><code>.stop .prevent .capture .self .once。
+</code></pre></li>
+<li><p><strong>el</strong> 指定要控制的区域，<strong>data</strong> 是个对象，指定了控制的区域内要用到的数据，<strong>methods</strong> 虽然带个s后缀，但是是个对象，这里可以自定义了方法。</p>
+</li>
+<li>在 VM 实例中，如果要访问 <strong>data</strong> 上的数据，或者要访问 <strong>methods</strong> 中的方法，必须带 <strong>this</strong>。</li>
+<li>在 <strong>v-for</strong> 要会使用 <strong>key</strong> 属性 （只接受 string / number）。</li>
+<li><strong>v-model</strong> 只能应用于表单元素。</li>
+<li>在vue中绑定样式两种方式  <strong>v-bind:class   、v-bind:style</strong>。</li>
+</ol>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Lsuis</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/blog/2019/05/10/Integration-StackStorm-Zabbix-1/" class="next-post btn btn-default" title='StackStorm安装及与Zabbix平台集成'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">StackStorm安装及与Zabbix平台集成</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/blog/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'LFKuM1kEs9n3Oh6qvG9kxo8d-gzGzoHsz',
+            appKey: 'XyB4N0A5K2TqfScBxDtNPXKg',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
 
 
+    </div>
 
 
 
@@ -174,87 +249,14 @@
 
                 </main>
                 
-                    
-    <aside class="col-md-4 sidebar">
-        
-        
+                    <aside id="article-toc" role="navigation" class="col-md-4">
     <div class="widget">
-        <h3 class="title">搜索</h3>
-        <div id="search-form">
-            <div id="result-mask" class="hide"></div>
-            <div class="search-area">
-                
-                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢？">
-                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
-                
-                
-            </div>
-            <div id="result-wrap" class="hide">
-                <div id="search-result"></div>
-            </div>
-            <div class="hide">
-                <template id="search-tpl">
-                    <div class="item">
-                        <a href="/{path}" title="{title}">
-                            <div class="title">{title}</div>
-                            <div class="content">{content}</div>
-                        </a>
-                    </div>
-                </template>
-            </div>
-        </div>
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue学习要点回顾-01"><span class="toc-text">Vue学习要点回顾__01</span></a></li></ol>
+        
     </div>
-
-        
-        
-    <div class="widget">
-        <h3 class="title">个人信息</h3>
-        <div class="message">
-            <p style="font-family:微软雅黑">
-  <div style="text-align:center;"><img style="text-align:center;width:180px;height:180px;border-radius:50%;" src="/blog/img/me.png"></div>
-  <h3 style="text-align:center;font-weight:bold;">李穗生</h3>
-  <div style="text-align:center; width:100%;">
-      <h3 style="font-weight:bold;">擅长的技能</h3>
-      <ul style="padding:0px;">
-          <li style="list-style:none;">JavaScript</li>
-          <li style="list-style:none;">Node.js</li>
-          <li style="list-style:none;">Go</li>
-      </ul>
-  </div>
-</p>
-        </div>
-    </div>
-
-        
-        
-    <div class="widget">
-        <h3 class="title">网站公告</h3>
-        <div class="notification">
-            <p>
-    网站终于部署成功了～感谢我自己和我爱吃的大白菜！
-    <div><img src='/blog/img/dabaicai.jpg' width=300 height=200 /><div/>
-</p>
-        </div>
-    </div>
-
-        
-        
-    <div class="widget">
-        <h3 class="title">分类</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/区块链/"><i class="fa" aria-hidden="true">区块链</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link current" href="/blog/categories/技术/"><i class="fa" aria-hidden="true">技术</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/随笔/"><i class="fa" aria-hidden="true">随笔</i></a><span class="category-list-count">1</span></li></ul>
-    </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">归档</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/03/"><i class="fa" aria-hidden="true">2020年03月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/"><i class="fa" aria-hidden="true">2019年05月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/"><i class="fa" aria-hidden="true">2019年03月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/"><i class="fa" aria-hidden="true">2019年02月</i></a><span class="archive-list-count">4</span></li></ul>
-    </div>
-
-
-        
-    </aside>
+</aside>
 
                 
             </div>
@@ -297,8 +299,6 @@
     </div>
 </div>
 
-
-	<script src="/blog/js/search.js?rev=@@hash"></script>
 
 
 

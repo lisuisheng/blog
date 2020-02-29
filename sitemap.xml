@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lisuisheng.github.io/blog/2020/03/01/Vue-StudyNote-01/</loc>
+    
+    <lastmod>2020-02-29T16:42:11.072Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://lisuisheng.github.io/blog/2019/03/15/concurrent&parallel/</loc>
+    
+    <lastmod>2020-02-29T16:28:16.369Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lisuisheng.github.io/blog/2019/05/10/Integration-StackStorm-Zabbix-1/</loc>
     
     <lastmod>2019-05-11T14:14:22.015Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http://lisuisheng.github.io/blog/2019/05/10/Integration-StackStorm-Zabbix/</loc>
     
     <lastmod>2019-05-10T08:49:13.265Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lisuisheng.github.io/blog/2019/03/15/concurrent&parallel/</loc>
-    
-    <lastmod>2019-03-15T10:25:30.592Z</lastmod>
     
   </url>
   
