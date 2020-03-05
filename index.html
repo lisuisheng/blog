@@ -14,15 +14,15 @@
                 href="https://lisuisheng.gitee.io/blog/">https://lisuisheng.gitee.io/blog/</a></p>
     </div>
     <script>
-        var seconds = 3;
+       var seconds = 3;
         setTimeout(() => {
-            location.redirect = 'https://lisuisheng.gitee.io/blog/'
+            location.href = 'https://lisuisheng.gitee.io/blog/';
         }, 3000)
         var secondInter = setInterval(() => {
-            if(seconds == 0){
+            document.getElementById('time').innerHTML = seconds + 's';
+            if (seconds == 0) {
                 clearInterval(secondInter);
             }
-            document.getElementById('time').innerHTML = seconds + 's';
             seconds--;
         }, 1000)
 
