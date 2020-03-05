@@ -15,13 +15,13 @@
     </div>
     <script>
         var seconds = 3;
-        if(seconds == 0){
-            clearInterval(secondInter);
-        }
         setTimeout(() => {
             location.redirect = 'https://lisuisheng.gitee.io/blog/'
         }, 3000)
         var secondInter = setInterval(() => {
+            if(seconds == 0){
+                clearInterval(secondInter);
+            }
             document.getElementById('time').innerHTML = seconds + 's';
             seconds--;
         }, 1000)
